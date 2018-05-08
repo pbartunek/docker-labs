@@ -1,0 +1,15 @@
+<p>
+What is your favorite meal?
+</p>
+
+<form action="/vote" method="post">
+  <% Choices.each do |id, text| %>
+    <div class="radio">
+      <label>
+        <input type='radio' name='vote' value='<%= id %>' id='vote_<%= id %>' />
+        <%= text %>
+      </label>
+    </div>
+  <% end %>
+  <button type='submit' class='btn btn-primary'>vote</button>
+</form>

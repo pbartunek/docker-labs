@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: Exporter
+Class-Path: commons-lang3-3.7.jar javafaker-0.15.jar snakeyaml-1.21.jar
