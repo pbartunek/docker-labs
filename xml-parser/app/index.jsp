@@ -35,9 +35,10 @@ if(request.getParameter("xml") != null) {
     // escape xml before embedding in html
     xmlOutput = org.apache.commons.lang3.StringEscapeUtils.escapeXml(writer.toString()); 
 
-  } catch (Exception e) {
-    e.printStackTrace();
+  } catch (org.xml.sax.SAXParseException e) {
     errorMsg = e.getMessage();
+  } catch (Exception e) {
+    errorMsg = "Unable to parse XML.";
   }
 }
 %>
