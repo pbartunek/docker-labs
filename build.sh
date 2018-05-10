@@ -12,6 +12,14 @@ function build() {
   fi
 
   docker build --rm --force-rm -t $image $dir;
+
+  echo "cleaning up"
+  if [ -f "$dir/build.sh" ]; then
+    cd $dir
+    rm **/*.jar *.war
+    rm -r lib
+    cd -
+  fi
 }
 
 if [ -z "$1" ]; then
