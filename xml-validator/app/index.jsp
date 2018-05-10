@@ -35,7 +35,7 @@ if(request.getParameter("xml") != null) {
     validatorMsg = "Your XML document is valid!";
 
   } catch (org.xml.sax.SAXParseException e) {
-    e.printStackTrace();
+    errorMsg = e.getMessage();
   } catch (Exception e) {
     errorMsg = "Unable to parse XML.";
   }
