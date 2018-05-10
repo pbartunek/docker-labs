@@ -16,9 +16,9 @@ function build() {
   echo "cleaning up"
   if [ -f "$dir/build.sh" ]; then
     cd $dir
-    rm **/*.jar *.war
-    rm -r lib
-    cd -
+    rm **/*.jar *.war 2> /dev/null
+    rm -r lib 2> /dev/null
+    cd ..
   fi
 }
 
