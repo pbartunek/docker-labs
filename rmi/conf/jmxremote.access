@@ -1,0 +1,3 @@
+admin readwrite create \
+  javax.management.loading.* \
+  unregister
