@@ -5,6 +5,7 @@ require 'active_support/all'
 require 'json'
 require 'erb'
 require 'yaml/store'
+require 'erubis'
 
 enable :sessions
 set :session_secret, ENV['SESSION_SECRET']
