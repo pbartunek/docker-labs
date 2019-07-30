@@ -8,12 +8,11 @@ RUN apt update && apt install -y \
     redis \
     && apt-get purge -y --auto-remove
 
-RUN addgroup --gid 1337 hackme \
-  && adduser --disabled-password --uid 1337 --gid 1337 hackme \
-  && mkdir /home/hackme/.ssh \
-  && chown -R hackme: /home/hackme
+RUN addgroup --gid 1337 redis \
+  && adduser --disabled-password --uid 1337 --gid 1337 redis \
+  && mkdir /home/redis/.ssh \
+  && chown -R redis: /home/redis
 
 COPY run.sh /
 
 CMD /run.sh
-#CMD /bin/sh
