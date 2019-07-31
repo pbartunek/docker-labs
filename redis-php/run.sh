@@ -1,4 +1,4 @@
 #!/bin/sh
 
-redis-server --protected-mode no &
-/usr/sbin/apache2ctl -D FOREGROUND
+service apache2 start
+redis-server --protected-mode no
