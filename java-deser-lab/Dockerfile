@@ -2,7 +2,6 @@ FROM openjdk:11.0-jre
 
 # Java deserialization lab, based on:
 # https://github.com/NickstaDB/DeserLab
-#
 
 ENV DOWNLOAD https://github.com/NickstaDB/DeserLab/releases/download/v1.0/DeserLab-v1.0.zip
 ENV DATA_DIR /opt/deser-lab
