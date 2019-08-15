@@ -1,6 +1,5 @@
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
-@JsonTypeInfo(use = JsonTypeInfo.Id.CLASS)
 public class Message {
 
   @JsonTypeInfo(use = JsonTypeInfo.Id.CLASS)
@@ -9,8 +8,8 @@ public class Message {
   private String message;
 
   public Message(String message) {
-    this.message = message;
-    this.messageId = new MessageId("aaaa");
+    this.message   = message;
+    this.messageId = new MessageId(message);
   }
 
   Message() {}
