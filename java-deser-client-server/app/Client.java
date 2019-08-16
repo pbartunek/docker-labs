@@ -38,7 +38,7 @@ public class Client {
         }
 
         System.out.println("Enter a message: ");
-        String str = scanner.next();
+        String str = scanner.nextLine();
 
         out.writeObject(new Message(str));
         out.flush();
